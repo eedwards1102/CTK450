@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Experience - The Environment Reader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="standard-view">
+        <header>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About the Project</a></li>
+                    <li><a href="audio-mockups.html">AI Mockup Recordings</a></li>
+                    <li><a href="ui-experience.html" aria-current="page">UI Experience</a></li>
+                    <li><a href="creator.html">About the Project Creator</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <div class="container">
+                <h1>UI Experience</h1>
+                <p>This experience is a concept to show how the Environment Reader would help someone who is blind or visually impaired navigate virtual reality. While we can't fully render VR here, we can give an idea of how AI can assist in an immersive, ever-changing UI.</p>
+                <p>This simulation demonstrates the AI agent of the Environment Reader assisting with tasks via a chat interface, or helping in apps you already use, like a messenger app.</p>
+                <button id="launch-btn" class="neon-button">Launch Experience</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="vr-view" class="hidden" aria-label="Environment Reader VR Simulation">
+        
+        <div id="vr-live-region" class="sr-only" aria-live="polite"></div>
+
+        <div id="boot-modal" class="modal">
+            <div class="modal-content">
+                <h2 tabindex="-1">System Initialized</h2>
+                <p>Welcome to the Environment Reader Concept.</p>
+                <p><strong>Try these simulated tasks:</strong></p>
+                <ol>
+                    <li>Click the <strong>Glowing Orb</strong> to simulate giving AI a request.</li>
+                    <li>Open the <strong>Messenger App</strong> and use the Environment Reader to accept your friend's invitation to the virtual campfire.</li>
+                </ol>
+                <p><em>Click anywhere to close this message.</em></p>
+            </div>
+        </div>
+
+        <div class="vr-grid">
+            <button id="btn-ai" class="vr-icon orb">Glowing Orb (AI)</button>
+            <button id="btn-messenger" class="vr-icon">Messenger</button>
+            <button id="btn-env" class="vr-icon">Environments</button>
+            <button id="btn-settings" class="vr-icon">Settings</button>
+        </div>
+
+        <div id="notification-area" class="hidden">
+            <p>Incoming Message from Mike: Join us at the campfire?</p>
+            <button id="btn-accept" class="neon-button-small">Accept</button>
+        </div>
+
+        <div id="ai-chat-interface" class="hidden">
+            <p>AI Agent Listening...</p>
+            <button id="btn-ai-command" class="neon-button-small">
+                "Take me to the New Year's Celebration"
+            </button>
+        </div>
+
+        <div id="scene-display" class="scene-text">
+            System Ready. Awaiting Input.
+        </div>
+
+        <button id="exit-btn" class="neon-button exit-btn">Exit Simulation</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
